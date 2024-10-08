@@ -1,4 +1,9 @@
-import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
+import {
+  CssBaseline,
+  GlobalStyles,
+  ThemeProvider,
+  useMediaQuery,
+} from "@mui/material";
 import { useMemo, useState } from "react";
 import App from "./App";
 import ToggleDarkMode from "./components/ToggleDarkMode";
@@ -15,6 +20,15 @@ export default function MainApp() {
   return (
     <ThemeProvider theme={appliedTheme}>
       <CssBaseline />
+      <GlobalStyles
+        styles={{
+          body: {
+            transition: appliedTheme.transitions.create(["background-color"], {
+              duration: appliedTheme.transitions.duration.standard,
+            }),
+          },
+        }}
+      />
       <ToggleDarkMode mode={mode} setMode={setMode} />
       <App />
     </ThemeProvider>

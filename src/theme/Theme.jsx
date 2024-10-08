@@ -37,8 +37,17 @@ const lightTheme = createTheme({
     },
   },
   transitions: {
+    easing: {
+      sharp: "0.4s",
+      standard: "0.4s",
+      easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
+    },
     duration: {
+      short: 150,
       standard: 300,
+      complex: 375,
+      enteringScreen: 225,
+      leavingScreen: 195,
     },
   },
   typography: {
@@ -143,8 +152,17 @@ const darkTheme = createTheme({
     },
   },
   transitions: {
+    easing: {
+      sharp: "0.4s",
+      standard: "0.4s",
+      easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
+    },
     duration: {
+      short: 150,
       standard: 300,
+      complex: 375,
+      enteringScreen: 225,
+      leavingScreen: 195,
     },
   },
   typography: {

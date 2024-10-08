@@ -1,19 +1,16 @@
 // src/ToggleDarkMode.js
 import { DarkMode, LightMode } from "@mui/icons-material";
-import { Fab, useColorScheme, useTheme } from "@mui/material";
+import { Fab, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
 
 function ToggleDarkMode({ mode, setMode }) {
-  const colorSchemeSetter = useColorScheme();
   const theme = useTheme();
 
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      colorSchemeSetter.setMode("dark");
     } else {
       setMode("light");
-      colorSchemeSetter.setMode("light");
     }
   };
 
@@ -33,7 +30,7 @@ function ToggleDarkMode({ mode, setMode }) {
             ? theme.palette.primary.main
             : theme.palette.primary.dark
         ),
-        transition: "color 0.3s ease",
+        transition: "background-color 0.3s ease, color 0.3s ease",
         "&:hover": {
           backgroundColor:
             mode === "light"
