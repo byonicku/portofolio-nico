@@ -1,8 +1,6 @@
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
-import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import {
   Box,
-  Button,
   Container,
   Grid2,
   Paper,
@@ -109,19 +107,6 @@ function App() {
                   </Grid2>
                 </Grid2>
               </Paper>
-            </Grid2>
-            <Grid2 item size={12}>
-              <Button
-                variant="outlined"
-                color="primary"
-                size="large"
-                fullWidth
-                href="https://drive.google.com/file/d/1CGqOsnnUogrNeF2PYMlx7JWe9y2RyB4E/view?usp=sharing"
-                target="_blank"
-              >
-                <DescriptionOutlinedIcon sx={{ marginRight: "0.1em" }} />
-                Download My CV
-              </Button>
             </Grid2>
           </Grid2>
         </Box>
